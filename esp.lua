@@ -6,17 +6,17 @@ local clr2 = Color.new(255.0, 255.0, 0.0)
 
 local function draw_is_preview(ent)
     if (ent == nil) then
-        return {true, "esp preview", clr2}
+        return true, "esp preview", clr2
     else
-        return {true, "weapon", clr2}
+        return true, "weapon", clr2
     end
 end
 
 local function draw_health(ent)
     if (ent == nil) then
-        return {true, "100", clr}
+        return true, "100", clr
     else
-        return {true, ent:GetPlayer():m_iHealth(), clr} -- you can pass int
+        return true, ent:GetPlayer():m_iHealth(), clr -- you can pass int
     end
 end
 
